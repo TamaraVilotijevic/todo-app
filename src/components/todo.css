@@ -1,0 +1,67 @@
+.todo-wrapper {
+    margin-top: -100px;
+}
+
+form {
+    margin-bottom: 25px;
+    padding: 20px 25px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
+}
+  
+.addTodo {
+    padding: 7px 22px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: hsl(280, 87%, 65%);
+    color: white;
+}
+  
+.addTodo:hover {
+    background-color: hsl(280, 87%, 76%);
+}
+  
+.inputTask {
+    padding: 5px 0;
+    border: none;
+    width: 100%;
+}
+
+.todo-list {
+    list-style: none;
+}
+  
+.todo-list li {
+    align-items: center;
+    padding: 20px 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
+    color: hsl(235, 21%, 11%);
+    background-color: white;
+}
+  
+.delete-icon:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+  
+.check-icon {
+    border: 1px solid rgb(107, 104, 104);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    padding: 2px 5px;
+}
+  
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
