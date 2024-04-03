@@ -1,9 +1,5 @@
 header {
     min-height: 330px;
-    background: url('../assets/bg-desktop-light.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 h1 {
@@ -21,7 +17,6 @@ h1 {
 }
 
 h2 {
-    color: white;
     text-transform: uppercase;
     font-size: 20px;
 }
@@ -33,17 +28,11 @@ nav {
   
 nav button {
     padding: 7px 22px;
-    color: hsl(234, 11%, 52%);
     font-weight: bold;
     cursor: pointer;
     margin-left: 20px;
-    background-color: white;
     border: none;
     border-radius: 3px;
-}
-  
-nav button:hover, nav button:active {
-    color: hsl(235, 24%, 19%);
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,17 +1,21 @@
 import { useContext, useState } from "react";
 import TodoLi from "./TodoLi";
 import { TodoContext } from "../context/TodoContext";
+import { ThemeContext } from "../context/ThemeContext";
 import './todo.css';
 
 const Todo = () => {
     const {todos, dispatch} = useContext(TodoContext);
     const [newTodo, setNewTodo] = useState('');
+    const {isLightTheme, light, dark} = useContext(ThemeContext);
+
+    const theme = isLightTheme ? light : dark;
     
     const handleChange = (e) => {
         setNewTodo(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const addTodo = (e) => {
         e.preventDefault();
         if (newTodo.trim() !== '') {
             dispatch({ type: 'ADD_TODO', payload: { id: Math.random()*100, description: newTodo, isChecked: false } });
@@ -22,8 +26,8 @@ const Todo = () => {
     };
 
     return <div className="container todo-wrapper">
-            <form onSubmit={handleSubmit} className="row">
-                <input className="inputTask" type="text" name="task" value={newTodo} onChange={handleChange} placeholder="Create a new todo..." />
+            <form onSubmit={addTodo} className="row" style={{color: theme.text, backgroundColor: theme.todoBg}}>
+                <input className="inputTask" style={{color: theme.text, backgroundColor: theme.todoBg}} type="text" name="task" value={newTodo} onChange={handleChange} placeholder="Create a new todo..." />
                 <input className="addTodo" type="submit" value="Add todo" />
             </form>
             <ul className="todo-list">
