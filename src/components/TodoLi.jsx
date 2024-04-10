@@ -9,7 +9,7 @@ const TodoLi = ({todo}) => {
     const {dispatch} = useContext(TodoContext);
     const {isLightTheme, light, dark} = useContext(ThemeContext);
     const [editing, setEditing] = useState(false);
-    const [editingText, setEditingText] = useState('');
+    const [editingText, setEditingText] = useState(todo.description);
 
     const theme = isLightTheme ? light : dark;
 
