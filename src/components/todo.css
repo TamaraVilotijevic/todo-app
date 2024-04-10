@@ -43,10 +43,19 @@ form {
     border-radius: 3px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
 }
+
+.delete-icon {
+    margin-left: 10px;
+}
   
 .delete-icon:hover {
     opacity: 0.7;
     cursor: pointer;
+}
+
+.edit-icon:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }
   
 .check-icon {
@@ -54,7 +63,7 @@ form {
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
-    padding: 2px 5px;
+    padding: 2px 6px;
     background-color: white;
 }
   

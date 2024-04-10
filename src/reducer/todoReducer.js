@@ -5,6 +5,11 @@ export const todoReducer = (state, action) => {
         
         case 'DELETE_TODO':
             return state.filter(todo => todo.id !== action.payload);
+
+        case 'EDIT_TODO':
+            return state.map(todo => 
+            todo.id === action.payload.id ? {...todo, description: action.payload.description} : todo
+        );
         
         case 'TOGGLE_TODO':
             return state.map(todo =>
