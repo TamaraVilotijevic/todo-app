@@ -25,9 +25,15 @@ const Todo = () => {
         }
     };
 
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            addTodo(e);
+        }
+    };
+
     return <div className="container todo-wrapper">
             <form onSubmit={addTodo} className="row" style={{color: theme.text, backgroundColor: theme.todoBg}}>
-                <input className="inputTask" style={{color: theme.text, backgroundColor: theme.todoBg}} type="text" name="task" value={newTodo} onChange={handleChange} placeholder="Create a new todo..." />
+                <input className="inputTask" style={{color: theme.text, backgroundColor: theme.todoBg}} type="text" name="task" value={newTodo} onChange={handleChange} onKeyDown={handleEnter} placeholder="Create a new todo..." />
                 <input className="addTodo" type="submit" value="Add todo" />
             </form>
             <ul className="todo-list">
