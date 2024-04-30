@@ -30,8 +30,8 @@ const TodoLi = ({todo}) => {
         dispatch({ type: 'TOGGLE_TODO', payload: todo.id });
     };
     
-    return <li className="row" style={{textDecoration: todo.isChecked ? 'line-through' : '', color: theme.text, backgroundColor: theme.todoBg}}>
-            {editing ? (<input className="inputTask" style={{color: theme.text, backgroundColor: theme.todoBg}} type="text" value={editingText} onChange={(e) => setEditingText(e.target.value)} />) : (todo.description)}
+    return <li className="row" style={{color: theme.text, backgroundColor: theme.todoBg}}>
+            {editing ? (<input className="inputTask" style={{color: theme.text, backgroundColor: theme.todoBg}} type="text" value={editingText} onChange={(e) => setEditingText(e.target.value)} />) : (<p style={{textDecoration: todo.isChecked ? 'line-through' : ''}}>{todo.description}</p>)}
             <div className="icon-wrapper">
                 <img src={deleteImg} alt="delete" className="delete-icon" onClick={handleDelete} />
                 {editing ? (
